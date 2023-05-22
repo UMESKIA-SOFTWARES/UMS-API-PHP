@@ -2,11 +2,9 @@
 
 ## Introduction
 
-UMS in full means Umeskia Softwares. Umeskia Softwares  is a software company based in kenya that provides software solutions to businesses and organizations.
+This is a PHP CODE for the UMS API. This library provides a wrapper around the UMS API. It allows you to access your UMS account using a simple set of PHP functions.
 
-UMS API PHP is a simple PHP script that shows how to use the UMS API with PHP.
-
-UMS API is a REST API that allows you to manage your UMS account and send SMS.
+## Documentation
 
 UMS API Documentation: https://portal.umeskiasoftwares.com/documentaion/
 
