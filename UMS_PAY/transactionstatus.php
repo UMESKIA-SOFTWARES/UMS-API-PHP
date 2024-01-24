@@ -1,9 +1,15 @@
 <?php
-$api_key = "your_api_key_here"; // Replace with your actual API key
-$email = "your_email_here";     // Replace with your actual email
+$api_key = "api_key_here";
+$email = "email_here";
+$transaction_request_id = "transaction_request_id_here";
+$payload = json_encode(array(
+    "api_key" => $api_key,
+    "email" => $email,
+    "transaction_request_id" => $transaction_request_id,
+));
 $curl = curl_init();
 curl_setopt_array($curl, array(
-    CURLOPT_URL => 'https://api.umeskiasoftwares.com/api/v1/smsbalance',
+    CURLOPT_URL => 'https://api.umeskiasoftwares.com/api/v1/transactionstatus',
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => '',
     CURLOPT_MAXREDIRS => 10,
@@ -11,10 +17,7 @@ curl_setopt_array($curl, array(
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
     CURLOPT_CUSTOMREQUEST => 'POST',
-    CURLOPT_POSTFIELDS => json_encode(array(
-        "api_key" => $api_key,
-        "email" => $email,
-    )),
+    CURLOPT_POSTFIELDS => $payload,
     CURLOPT_HTTPHEADER => array(
         'Content-Type: application/json',
     ),

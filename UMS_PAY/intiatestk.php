@@ -1,9 +1,19 @@
 <?php
-$api_key = "your_api_key_here"; // Replace with your actual API key
-$email = "your_email_here";     // Replace with your actual email
+$api_key = "SVQ4WVpPQUQ6NnpicDJsMm8=";
+$email = "alvo967@gmail.com";
+$amount = "2";
+$msisdn = "254768168060";
+$reference = "675432";
+$payload = json_encode(array(
+    "api_key" => $api_key,
+    "email" => $email,
+    "amount" => $amount,
+    "msisdn" => $msisdn,
+    "reference" => $reference,
+));
 $curl = curl_init();
 curl_setopt_array($curl, array(
-    CURLOPT_URL => 'https://api.umeskiasoftwares.com/api/v1/smsbalance',
+    CURLOPT_URL => 'https://api.umeskiasoftwares.com/api/v1/intiatestk',
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => '',
     CURLOPT_MAXREDIRS => 10,
@@ -11,10 +21,7 @@ curl_setopt_array($curl, array(
     CURLOPT_FOLLOWLOCATION => true,
     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
     CURLOPT_CUSTOMREQUEST => 'POST',
-    CURLOPT_POSTFIELDS => json_encode(array(
-        "api_key" => $api_key,
-        "email" => $email,
-    )),
+    CURLOPT_POSTFIELDS => $payload,
     CURLOPT_HTTPHEADER => array(
         'Content-Type: application/json',
     ),
