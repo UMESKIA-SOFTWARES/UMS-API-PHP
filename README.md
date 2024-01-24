@@ -6,5 +6,5 @@ This is a PHP CODE for the UMS API. This library provides a wrapper around the U
 
 ## Documentation
 
-UMS API Documentation: https://portal.umeskiasoftwares.com/documentaion/
+UMS API Documentation: https://portal.umeskiasoftwares.com/documentaion/index.html
 
