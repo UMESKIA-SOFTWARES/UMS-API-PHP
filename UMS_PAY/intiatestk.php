@@ -1,12 +1,14 @@
 <?php
-$api_key = "SVQ4WVpPQUQ6NnpicDJsMm8=";
-$email = "alvo967@gmail.com";
-$amount = "2";
-$msisdn = "254768168060";
+$api_key = "YOUR_API_KEY";
+$email = "YOUR_EMAIL";
+$account_id = "YOUR_ACCOUNT_ID";
+$amount = "10";
+$msisdn = "254712345678";
 $reference = "675432";
 $payload = json_encode(array(
     "api_key" => $api_key,
     "email" => $email,
+    'account_id' => $account_id,
     "amount" => $amount,
     "msisdn" => $msisdn,
     "reference" => $reference,
